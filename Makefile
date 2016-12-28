@@ -1,7 +1,7 @@
 IMAGE_NAME ?= post-deplopment-test
 DOCKER_TAG ?= latest
 
-all: test
+all: run
 TEST_ENDPOINT ?= http://192.168.33.21 # Should not be production endpoint during development testing
 
 env: requirements.txt
@@ -26,4 +26,4 @@ clean:
 	rm -rf env
 	rm -f testcases/*.pyc
 
-.PHONY: check test clean
+.PHONY: check run clean
